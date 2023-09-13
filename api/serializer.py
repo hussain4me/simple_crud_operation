@@ -1,9 +1,8 @@
 from rest_framework import serializers
-from .models import User_Profile, User
+from .models import Person
 
 class UserProfileSerilier(serializers.ModelSerializer):
     class Meta:
-        model = User_Profile
-        fields = ['name','sex','user','track', 'created']
+        model = Person
+        fields = ['name','sex','track', 'created']
 
- 
