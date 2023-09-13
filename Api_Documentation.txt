@@ -1,0 +1,103 @@
+
+Standard formats for requests and responses for each endpoint.
+ 
+===============================================================================
+sample request:
+==============================================================================
+
+Important notice: the user_id at the end of some of the endpoints, should be replace with individual user id i.e numeric value.
+
+create endpoint
+  url : 	hussain4me.pythonanywhere.com/api
+  method :      POST	
+    {
+        "name": "Zubair Nurudeen1",
+        "sex": "Male",
+        "track": "Backend",
+        "created": "2023-09-13"
+    }
+
+Update endpoint
+ url : 	hussain4me.pythonanywhere.com/api/user_id
+  method :      PUT	
+    {
+        "name": "Zubair Nurudeen1",
+        "sex": "Male",
+        "track": "Backend",
+        "created": "2023-09-13"
+    }
+
+Delete endpoint
+ url : 	hussain4me.pythonanywhere.com/api/user_id 
+  method :      DELETE	
+   
+Read endpoint
+ url : 	hussain4me.pythonanywhere.com/api/user_id
+  method :      GET	
+   
+
+===============================================================================
+Response
+===============================================================================
+
+Create endpoint Response
+
+[
+	{
+        	"name": "Zubair Nurudeen1",
+        	"sex": "Male",
+        	"track": "Backend",
+        	"created": "2023-09-13"
+        }
+	{
+        	"name": "Zubair Nurudeen2",
+        	"sex": "Male",
+        	"track": "Backend",
+        	"created": "2023-09-13"
+        }
+	
+	..
+]
+
+
+Update endpoint Response
+
+	{
+        	"name": "Zubair Nurudeen1",
+        	"sex": "Male",
+        	"track": "Backend",
+        	"created": "2023-09-13"
+        }
+
+
+
+Delete endpoint Response
+
+	1
+
+
+ Read endpoint Response
+
+	{
+        	"name": "Zubair Nurudeen1",
+        	"sex": "Male",
+        	"track": "Backend",
+        	"created": "2023-09-13"
+        }
+
+
+==============================================================================
+Instruction to setup on local machine
+============================================================================== 
+
+Ensure Python and django are installed on your local machine
+
+open this project named "simple_crud_operation" with either command line environment or with code code editor
+
+open the terminal and type
+
+pip install -r requirements.txt
+
+then 
+
+python manage.py runserver
