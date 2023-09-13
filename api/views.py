@@ -23,7 +23,10 @@ def add_person(request):
 @api_view(['GET','PUT','DELETE'])
 def update_delete_person(request, pk):
 
-    person = get_object_or_404(Person,id=pk)
+    if pk.isdigit() == False:
+        return Response(f"Wrong Paramenter \'{pk}\'", status=status.HTTP_204_NO_CONTENT)
+    
+    person = get_object_or_404(Person,id = int(pk))
     if request.method == 'GET':
         serializer = UserProfileSerilier(person)
         return Response(serializer.data)
